@@ -1,0 +1,123 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.character {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.animation {
+    display: block;
+    height: 200px;
+    image-rendering: pixelated;
+    animation: sprite 2s steps(10) infinite;
+}
+
+@keyframes sprite {
+    from {
+        transform: translate(0px,0)
+    }
+    to {
+        transform: translate(-100%,0)
+    }
+}
+
+.panel {
+    background-color: palegoldenrod;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 915px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.class-choice {
+    border-bottom: 3px dashed grey;
+}
+
+.class-choice:last-child {
+    border-bottom: none;
+}
+
+.class-name {
+    color: gray;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 30px 0px;
+}
+
+.atrributes {
+    margin: 50px 0 25px;
+}
+
+.item {
+    color: purple;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 3px dashed grey;
+}
+
+.item:last-child {
+    border-bottom: 3px dashed grey;
+}
+
+.animation-alt {
+    display: none;
+}
+
+.feature {
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid purple;
+    border-radius: 10px;
+    color: purple;
+    display: inline-block;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+.feature:hover {
+    color: plum;
+    border: 1px solid plum;
+    background-color: indigo;
+}
+
+@media (min-width: 1000px) {
+    .panel {
+        flex-direction: row;
+    }
+    .class-choice {
+        border-bottom: none;
+        border-right: 3px dashed gray;
+        padding: 25px 50px;
+    }
+    .class-choice:last-child {
+        border-right: none;
+    }
+}
